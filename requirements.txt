@@ -1,0 +1,9 @@
+#These Are the required libraries for the project, to install them run the command:
+# pip install -r requirements.txt
+
+geopy
+mysql-connector-python
+customtkinter
+tkinter
+requests
+pywatkit
