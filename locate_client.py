@@ -1,4 +1,4 @@
-import Register_Login
+#Imports
 import requests
 from geopy.geocoders import Nominatim
 
