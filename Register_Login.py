@@ -17,7 +17,9 @@ def register():
     name = input("put your name: ")
     password = input("put your password: ")
     contactnum = input("put you contactnumber: ")
-    cursor.execute("INSERT INTO account (username, password, contact_num) VALUES (%s, %s, %s)", (name, password, contactnum))
+    location = input("put your location: ")
+    region = input("put your region: ")
+    cursor.execute("INSERT INTO account (username, password, contact_num, location, region) VALUES (%s, %s, %s, %s, %s)", (name, password, contactnum, location, region))
     db.commit()
     locate_client.geolocator()                 
                    

@@ -29,13 +29,29 @@ def SeeLocation():
   time.sleep(2)
   geolocator()
 
-def OtherUsersloc():
-  menu = input("do you want to see others pepole location: ")
+def OtherUsersReg():
+  menu = input("do you want to see others pepole region: ")
   if menu == "yes":
-    cursor.execute("SELECT username, region FROM `account`")  
+    cursor.execute("SELECT username, region FROM `account`")
     accounts = cursor.fetchall()
     for username, region in accounts:
       print(f"Username: {username}, Region: {region}")
+      time.sleep(2)
+      geolocator()
+  elif menu == "no":
+    geolocator()    
+
+def OtherUsersloc():
+  menu = input("do you want to see others pepole location: ")
+  if menu == "yes":
+    cursor.execute("SELECT username, location FROM `account`")  
+    accounts = cursor.fetchall()
+    for username, location in accounts:
+      print(f"Username: {username}, Region: {location}")
+      time.sleep(2)
+      geolocator()
+  elif menu == "no":
+    geolocator()
       
 #User Interface
 def geolocator():
@@ -44,4 +60,6 @@ def geolocator():
     SeeLocation()
   elif menu == 2:
     OtherUsersloc()  
+  elif menu == 3:
+    OtherUsersReg()  
  
