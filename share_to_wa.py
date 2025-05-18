@@ -8,7 +8,7 @@ location = ip_data['loc']
 latitude, longitude = map(float, location.split(','))
 
 # API key
-api_key = "6beab64899071c31f2ddb0d7ef384a5c"  # Replace with your actual API key
+api_key = ""  # Replace with your actual API key
 
 # Base URL
 user_url = f"https://api.openweathermap.org/data/2.5/weather?lat={latitude}&lon={longitude}&appid={api_key}&units=metric"
