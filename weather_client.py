@@ -6,7 +6,7 @@ location = ip_data['loc']
 latitude, longitude = map(float, location.split(','))
 
 # API key
-api_key = ""  # Replace with your actual API key
+api_key = "47c8db8c502f1352f1358ec3aa0afb4b"  # Replace with your actual API key
 
 # Cities
 city1 = "Saida"
