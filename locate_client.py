@@ -30,7 +30,7 @@ def SeeLocation():
   geolocator()
 
 def OtherUsersReg():
-  otherusersregion = input("what user do you want to search and i will serach the region")
+  otherusersregion = input("what user do you want to search and i will serach the region: ")
   cursor.execute("SELECT region FROM account WHERE username = %s", (otherusersregion,))
   result = cursor.fetchone()
   if result:
