@@ -31,7 +31,7 @@ def SeeLocation():
 
 def OtherUsersReg():
   otherusersregion = input("what user do you want to search and i will serach the region")
-  cursor.execute("SELECT region FROM accounr WHERE username = %s", (otherusersregion,))
+  cursor.execute("SELECT region FROM account WHERE username = %s", (otherusersregion,))
   result = cursor.fetchone()
   if result:
     print(f"Region For {otherusersregion}: {result[0]}")
@@ -58,11 +58,12 @@ def OtherUsersloc():
       
 #User Interface
 def geolocator():
-  menu = int(input("\n\nWelcome To The Testing Python Client For RisingSun! Choose The 3 Options\n 1.See Your Location \n 2.See Other Users \n 3.See Weather In Other Location \n 4.Exit \n What Do You Choose: "))
+  menu = int(input("\n\nWelcome To The Testing Python Client For RisingSun! Choose The 3 Options\n 1.See Your Location \n 2.See Other Users \n 3.See Weather In Other Location \n 4.share weather to whatsup \n What Do You Choose: "))
   if menu == 1:
     SeeLocation()
   elif menu == 2:
     OtherUsersloc()  
   elif menu == 3:
     OtherUsersReg()  
+    
  
